@@ -1,0 +1,7 @@
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Release\ShowMeThePower.csprojResolveAssemblyReference.cache
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Assemblies\ShowMeThePower.dll
+D:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Release\ShowMeThePower.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Assemblies\ShowMeThePower.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Release\ShowMeThePower.csprojResolveAssemblyReference.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Release\ShowMeThePower.csproj.CoreCompileInputs.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Release\ShowMeThePower.dll
