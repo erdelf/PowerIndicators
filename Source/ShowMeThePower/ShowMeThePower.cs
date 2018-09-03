@@ -15,7 +15,7 @@ namespace ShowMeThePower
         private static readonly Dictionary<string, Texture2D> fuel = new Dictionary<string, Texture2D>();
 
         static ShowMeThePower() => HarmonyInstance.Create(id: "rimworld.erdelf.powerShower").Patch(
-            original: AccessTools.Method(type: typeof(Designator_Build), name: nameof(Designator_Build.GizmoOnGUI)), prefix: null,
+            original: AccessTools.Method(type: AccessTools.Method(type: typeof(Designator_Build), name: nameof(Designator_Build.GizmoOnGUI)).DeclaringType, name: nameof(Designator_Build.GizmoOnGUI)), prefix: null,
             postfix: new HarmonyMethod(type: typeof(ShowMeThePower), name: nameof(DesignatorShower)));
 
         public static void DesignatorShower(Command __instance, Vector2 topLeft, GizmoResult __result)
