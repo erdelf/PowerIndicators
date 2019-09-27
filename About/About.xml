@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Power Indicators</name>
   <author>erdelf</author>
-  <targetVersion>0.19.0</targetVersion>
+  <supportedVersions><li>1.0</li></supportedVersions>
   <description>
 Enables a little indicator on build designators if power is needed or if it's refuelable
     </description>
