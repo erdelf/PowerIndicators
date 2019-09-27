@@ -50,8 +50,9 @@
     <OutputPath>..\..\Assemblies\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\..\..\..\Users\erdelfion\Documents\modfiles\rimworld\HarmonyRepos\Harmony\Harmony\bin\Release\net35\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Users\simon\Documents\modfiles\rimworld\HarmonyRepos\Harmony\Harmony\bin\Release\net35\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>

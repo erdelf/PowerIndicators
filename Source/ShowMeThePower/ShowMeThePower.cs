@@ -14,13 +14,26 @@ namespace ShowMeThePower
 
         private static readonly Dictionary<string, Texture2D> fuel = new Dictionary<string, Texture2D>();
 
-        static ShowMeThePower() => HarmonyInstance.Create(id: "rimworld.erdelf.powerShower").Patch(
-            original: AccessTools.Method(type: AccessTools.Method(type: typeof(Designator_Build), name: nameof(Designator_Build.GizmoOnGUI)).DeclaringType, name: nameof(Designator_Build.GizmoOnGUI)), prefix: null,
-            postfix: new HarmonyMethod(type: typeof(ShowMeThePower), name: nameof(DesignatorShower)));
+        static ShowMeThePower()
+        {
+            HarmonyInstance harmony = HarmonyInstance.Create(id: "rimworld.erdelf.powerShower");
+            harmony.Patch(original: AccessTools.Method(type: AccessTools.Method(type: typeof(Designator_Build), name: nameof(Designator_Build.GizmoOnGUI)).DeclaringType, name: nameof(Designator_Build.GizmoOnGUI)),
+                                                        postfix: new HarmonyMethod(type: typeof(ShowMeThePower), name: nameof(DesignatorShower)));
+            harmony.Patch(original: AccessTools.Method(type: AccessTools.Method(type: typeof(Designator_Dropdown), name: nameof(Designator_Dropdown.GizmoOnGUI)).DeclaringType, name: nameof(Designator_Dropdown.GizmoOnGUI)),
+                          postfix: new HarmonyMethod(type: typeof(ShowMeThePower), name: nameof(DesignatorShower)));
+        }
 
         public static void DesignatorShower(Command __instance, Vector2 topLeft, GizmoResult __result)
         {
-            if (!(__instance is Designator_Build db) || !(db.PlacingDef is ThingDef td)) return;
+
+            Command des = __instance;
+
+            if (__instance is Designator_Dropdown ddd)
+                des = Traverse.Create(ddd).Field<Designator>("activeDesignator").Value;
+
+            if (!(des is Designator_Build db) || !(db.PlacingDef is ThingDef td)) return;
+
+
             if (td.ConnectToPower)
             {
                 GUI.DrawTexture(
