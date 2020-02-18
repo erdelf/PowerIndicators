@@ -2,7 +2,7 @@
 using Verse;
 using System.Linq;
 using UnityEngine;
-using Harmony;
+using HarmonyLib;
 using System.Collections.Generic;
 
 namespace ShowMeThePower
@@ -16,14 +16,14 @@ namespace ShowMeThePower
 
         static ShowMeThePower()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create(id: "rimworld.erdelf.powerShower");
+            Harmony harmony = new Harmony(id: "rimworld.erdelf.powerShower");
             harmony.Patch(original: AccessTools.Method(type: AccessTools.Method(type: typeof(Designator_Build), name: nameof(Designator_Build.GizmoOnGUI)).DeclaringType, name: nameof(Designator_Build.GizmoOnGUI)),
-                                                        postfix: new HarmonyMethod(type: typeof(ShowMeThePower), name: nameof(DesignatorShower)));
+                                                        postfix: new HarmonyMethod(methodType: typeof(ShowMeThePower), methodName: nameof(DesignatorShower)));
             harmony.Patch(original: AccessTools.Method(type: AccessTools.Method(type: typeof(Designator_Dropdown), name: nameof(Designator_Dropdown.GizmoOnGUI)).DeclaringType, name: nameof(Designator_Dropdown.GizmoOnGUI)),
-                          postfix: new HarmonyMethod(type: typeof(ShowMeThePower), name: nameof(DesignatorShower)));
+                          postfix: new HarmonyMethod(methodType: typeof(ShowMeThePower), methodName: nameof(DesignatorShower)));
         }
 
-        public static void DesignatorShower(Command __instance, Vector2 topLeft, GizmoResult __result)
+        public static void DesignatorShower(Command __instance, Vector2 topLeft)
         {
 
             Command des = __instance;
@@ -41,7 +41,7 @@ namespace ShowMeThePower
                         height: power.height                                                                                  / 3                                       * 2), image: power);
 
             }
-            else if (td.GetCompProperties<CompProperties_Refuelable>() is CompProperties_Refuelable refuelProps)
+            else if (td.GetCompProperties<CompProperties_Refuelable>() is CompProperties_Refuelable refuelProps && refuelProps.fuelFilter.AllowedThingDefs.Any())
             {
                 ThingDef def  = refuelProps.fuelFilter.AllowedThingDefs.First();
                 Graphic  g    = def.graphic;

@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Source/ShowMeThePower/.vs/ShowMeThePower/v16
+/Source/ShowMeThePower/packages/Lib.Harmony.2.0.0.2
