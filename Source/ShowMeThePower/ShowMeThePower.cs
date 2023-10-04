@@ -36,9 +36,7 @@ namespace ShowMeThePower
 
             if (td.ConnectToPower)
             {
-                GUI.DrawTexture(
-                    position: new Rect(x: topLeft.x + __instance.GetWidth(maxWidth: float.MaxValue) - power.width / 3 * 2 / 4 * 3, y: topLeft.y, width: power.width / 3 * 2,
-                        height: power.height                                                                                  / 3                                       * 2), image: power);
+                GUI.DrawTexture(new Rect(x: topLeft.x + __instance.GetWidth(maxWidth: float.MaxValue) - 32f / 3 * 2 / 4 * 3, y: topLeft.y, width: 32f / 3 * 2, height: 32f / 3 * 2), image: power, ScaleMode.ScaleToFit);
 
             }
             else if (td.GetCompProperties<CompProperties_Refuelable>() is CompProperties_Refuelable refuelProps && refuelProps.fuelFilter.AllowedThingDefs.Any())
@@ -51,9 +49,7 @@ namespace ShowMeThePower
                 if (!fuel.ContainsKey(key: path))
                     fuel.Add(key: path, value: ContentFinder<Texture2D>.Get(itemPath: path));
 
-                GUI.DrawTexture(
-                    position: new Rect(x: topLeft.x + __instance.GetWidth(maxWidth: float.MaxValue) - power.width / 4 * 3, y: topLeft.y, width: power.width / 3 * 2, height: power.height / 3 * 2),
-                    image: fuel[key: path]);
+                GUI.DrawTexture(new Rect(x: topLeft.x + __instance.GetWidth(maxWidth: float.MaxValue) - 32f / 4 * 3, y: topLeft.y, width: 32f / 3 * 2, height: 32f / 3 * 2), image: fuel[path], ScaleMode.ScaleToFit);
             }
         }
     }
