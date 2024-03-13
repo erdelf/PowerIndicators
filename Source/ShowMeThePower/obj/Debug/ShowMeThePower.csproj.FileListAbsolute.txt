@@ -3,3 +3,10 @@ C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePow
 C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Debug\ShowMeThePower.csproj.CoreCompileInputs.cache
 C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Debug\ShowMeThePower.csproj.CopyComplete
 C:\Games\Steam\steamapps\common\RimWorld\Mods\ShowMeThePower\Source\ShowMeThePower\obj\Debug\ShowMeThePower.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\Assemblies\ShowMeThePower.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\Source\ShowMeThePower\obj\Debug\ShowMeThePower.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\1.1\Assemblies\ShowMeThePower.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\Source\ShowMeThePower\obj\Debug\ShowMeThePower.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\Source\ShowMeThePower\obj\Debug\ShowMeThePower.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\1.5\Assemblies\ShowMeThePower.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PowerIndicators\Source\ShowMeThePower\obj\Debug\ShowMeTh.C5B11285.Up2Date
